@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>YesDR: AI-Powered Private Cellular Standard</title>
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f7f9fb;
+      color: #333;
+    }
+
+    header {
+      background-color: #003366;
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: auto;
+      padding: 2rem 1rem;
+    }
+
+    section {
+      margin-bottom: 3rem;
+    }
+
+    h1, h2, h3 {
+      color: #003366;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+    }
+
+    th, td {
+      padding: 0.75rem;
+      border: 1px solid #ccc;
+      text-align: left;
+    }
+
+    th {
+      background-color: #e3f2fd;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #666;
+      margin: 3rem 0 1rem 0;
+    }
+
+    code {
+      background: #eee;
+      padding: 2px 5px;
+      border-radius: 3px;
+    }
+
+    .highlight {
+      background: #e0f0ff;
+      padding: 0.5rem;
+      border-left: 5px solid #007acc;
+      margin: 1rem 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>YesDR</h1>
+    <p>An AI-Powered Private Cellular Standard</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>Overview</h2>
+      <p>
+        <strong>YesDR (Yes Defined Radio)</strong> is an open, AI-powered, software-defined private cellular standard designed for research, industrial, and rural deployments.
+        It integrates advanced wireless protocol stack elements and spectrum intelligence features for seamless experimentation and deployment.
+      </p>
+    </section>
+
+    <section>
+      <h2>Core Components</h2>
+      <ul>
+        <li><strong>YCore:</strong> YesDR Core Network managing authentication, policy, sessions, and data forwarding</li>
+        <li><strong>YBS:</strong> YesDR Base Station responsible for wireless access and control</li>
+        <li><strong>YUE:</strong> YesDR User Equipment acting as client or terminal</li>
+        <li><strong>YSM:</strong> YesDR Spectrum Monitor for sensing, inference, and visualization</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>YesDR Protocol Stack</h2>
+      <p>The YesDR protocol stack spans across YUE, YBS, and spectrum monitoring layers as shown below:</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Term</th>
+            <th>Full Form</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>YUE</td><td>YesDR User Equipment</td><td>End device running YesDR protocol stack.</td></tr>
+          <tr><td>APP</td><td>Application Layer</td><td>User-facing services generating or consuming data.</td></tr>
+          <tr><td>TRN</td><td>Transport Layer</td><td>Handles end-to-end transport (TCP/UDP).</td></tr>
+          <tr><td>IP</td><td>Internet Protocol Layer</td><td>Manages logical addressing and routing.</td></tr>
+          <tr><td>PDCP</td><td>Packet Data Convergence Protocol</td><td>Performs header compression, encryption.</td></tr>
+          <tr><td>RLC</td><td>Radio Link Control</td><td>Error correction, segmentation, retransmission.</td></tr>
+          <tr><td>MAC</td><td>Medium Access Control</td><td>Multiplexing and channel access.</td></tr>
+          <tr><td>PHY</td><td>Physical Layer</td><td>Waveform modulation/demodulation (e.g., BPSK).</td></tr>
+          <tr><td>YBS</td><td>YesDR Base Station</td><td>Radio access node connecting UEs to the core.</td></tr>
+          <tr><td>YACP</td><td>Access Control Protocol</td><td>Handles access, registration, and authentication.</td></tr>
+          <tr><td>SDAP</td><td>Service Data Adaptation Protocol</td><td>Maps application data to QoS bearers.</td></tr>
+          <tr><td>YSM</td><td>YesDR Spectrum Monitor</td><td>Performs sensing, classification, and visualization.</td></tr>
+          <tr><td>YAP</td><td>YesDR Application Layer</td><td>GUI/CLI interface for monitoring tools.</td></tr>
+          <tr><td>YAIF</td><td>AI Inference Layer</td><td>Performs signal classification and prediction.</td></tr>
+          <tr><td>YDAG</td><td>Data Aggregation Layer</td><td>Aggregates metrics from the radio environment.</td></tr>
+          <tr><td>YSS</td><td>Spectrum Sensing Layer</td><td>Performs FFT, energy detection, and filtering.</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>YesDR Core Network Functions</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Term</th>
+            <th>Full Form</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>YAMF</td><td>Access Control Function</td><td>Handles UE registration and mobility management.</td></tr>
+          <tr><td>YSMF</td><td>Session Control Function</td><td>Manages IP sessions and routing.</td></tr>
+          <tr><td>YUPF</td><td>Data Plane Function</td><td>Routes user traffic based on policies.</td></tr>
+          <tr><td>YNRF</td><td>Service Directory Function</td><td>Provides service discovery.</td></tr>
+          <tr><td>YUDM</td><td>Data Management Function</td><td>Holds subscriber/device info.</td></tr>
+          <tr><td>YAUSF</td><td>Authentication Function</td><td>Performs authentication and key agreement.</td></tr>
+          <tr><td>YPCF</td><td>Policy Management Function</td><td>Applies policy rules for sessions.</td></tr>
+          <tr><td>YSEF</td><td>Service Exposure Function</td><td>Secure APIs for external integration.</td></tr>
+          <tr><td>YNSSF</td><td>Slice Orchestration Function</td><td>Manages network slices for specific uses.</td></tr>
+          <tr><td>YRMF</td><td>Radio Management Function</td><td>Controls spectrum and RF settings at YBS.</td></tr>
+          <tr><td>YCRF</td><td>Cognitive Radio Function</td><td>AI-driven dynamic spectrum reallocation.</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>YesDR Control Protocols</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Term</th>
+            <th>Full Form</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>YACP</td><td>Access Control Protocol</td><td>UE-BS-Core authentication and registration.</td></tr>
+          <tr><td>YSCP</td><td>Spectrum Control Protocol</td><td>YSM to core spectrum data exchange.</td></tr>
+          <tr><td>YTMP</td><td>Traffic Management Protocol</td><td>Session setup and QoS coordination.</td></tr>
+          <tr><td>YTP</td><td>Tunneling Protocol</td><td>Encapsulation and forwarding of user traffic.</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>Join the YesDR Community</h2>
+      <p>YesDR is developed by <strong>Chandhar Research Labs</strong> and supported by academic and industrial collaborators. Contributions, feedback, and collaborations are welcome.</p>
+      <p>📫 Email: <a href="mailto:contact@yesdr.org">contact@yesdr.org</a><br>
+         🌐 GitHub: <a href="https://github.com/your-username/yesdr-standard">yesdr-standard</a></p>
+    </section>
+
+    <footer>
+      &copy; 2025 YesDR – AI-Powered Private Cellular Standard<br/>
+      Built with 🛠️ by Chandhar Research Labs
+    </footer>
+  </main>
+</body>
+</html>
