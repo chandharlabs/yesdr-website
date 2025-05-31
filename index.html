@@ -1,108 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>YesDR: AI-Powered Cellular Standard</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>YesDR – AI-Powered Private Cellular Standard</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #121212;
-      color: #f0f0f0;
       margin: 0;
-      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #0e0e0e;
+      color: #eaeaea;
     }
     header {
-      background-color: #1f1f1f;
-      padding: 40px;
+      background: linear-gradient(to right, #2b5876, #4e4376);
+      padding: 60px 20px;
       text-align: center;
     }
     header h1 {
-      color: white;
-      font-size: 2.5em;
+      font-size: 3em;
+      color: #ffffff;
     }
     header p {
-      color: white;
-      font-size: 1.2em;
+      font-size: 1.4em;
+      color: #ffffff;
     }
-    main {
-      padding: 40px;
+    section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: 0 auto;
     }
     h2 {
-      color: #00bcd4;
+      color: #ffffff;
+      border-bottom: 2px solid #555;
+      padding-bottom: 5px;
     }
     table {
       width: 100%;
       border-collapse: collapse;
-      margin: 20px 0;
+      margin-top: 20px;
     }
     th, td {
-      border: 1px solid #555;
-      padding: 10px;
+      padding: 12px;
+      border: 1px solid #444;
       text-align: left;
     }
     th {
       background-color: #333;
+      color: #fff;
     }
     tr:nth-child(even) {
-      background-color: #222;
+      background-color: #1e1e1e;
+    }
+    footer {
+      text-align: center;
+      padding: 30px;
+      background-color: #111;
+      font-size: 0.9em;
+      color: #aaa;
     }
   </style>
 </head>
 <body>
+
   <header>
     <h1>YesDR</h1>
     <p>An AI-Powered Private Cellular Standard</p>
   </header>
-  <main>
-    <h2>YesDR Protocol Stack (YUE & YBS)</h2>
-    <p><strong>YUE - YesDR User Equipment</strong><br>
-    Layers: APP → TRN (TCP/UDP) → IP → PDCP → RLC → MAC → PHY (SDR/BPSK)</p>
 
-    <p><strong>YBS - YesDR Base Station</strong><br>
-    Layers: APP → YACP → SDAP → PDCP → RLC → MAC → PHY</p>
-
-    <h2>TABLE II: Protocol Stack Terms</h2>
+  <section>
+    <h2>YesDR Protocol Stack Overview</h2>
     <table>
-      <tr><th>Term</th><th>Full Form</th><th>Description</th></tr>
-      <tr><td>YUE</td><td>YesDR User Equipment</td><td>End-user device running YesDR stack</td></tr>
-      <tr><td>APP</td><td>Application Layer</td><td>User-facing services and applications</td></tr>
-      <tr><td>TRN</td><td>Transport Layer</td><td>TCP/UDP communication</td></tr>
-      <tr><td>IP</td><td>Internet Protocol Layer</td><td>Packet addressing/routing</td></tr>
-      <tr><td>PDCP</td><td>Packet Data Convergence Protocol</td><td>Compression, encryption, integrity</td></tr>
-      <tr><td>RLC</td><td>Radio Link Control</td><td>Error correction, segmentation</td></tr>
-      <tr><td>MAC</td><td>Medium Access Control</td><td>Channel access and mapping</td></tr>
-      <tr><td>PHY</td><td>Physical Layer</td><td>SDR waveform handling (e.g., BPSK)</td></tr>
-      <tr><td>YBS</td><td>YesDR Base Station</td><td>Base station for radio communication</td></tr>
-      <tr><td>YACP</td><td>YesDR Access Control Protocol</td><td>UE access and registration</td></tr>
-      <tr><td>SDAP</td><td>Service Data Adaptation Protocol</td><td>QoS bearer mapping</td></tr>
+      <thead>
+        <tr>
+          <th>Term</th>
+          <th>Full Form</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>YUE</td><td>YesDR User Equipment</td><td>Device accessing the YesDR network</td></tr>
+        <tr><td>APP</td><td>Application Layer</td><td>User-facing services and applications</td></tr>
+        <tr><td>TRN</td><td>Transport Layer</td><td>Provides end-to-end communication (e.g., TCP/UDP)</td></tr>
+        <tr><td>IP</td><td>Internet Protocol</td><td>Handles logical addressing and routing</td></tr>
+        <tr><td>PDCP</td><td>Packet Data Convergence Protocol</td><td>Header compression, ciphering, integrity</td></tr>
+        <tr><td>RLC</td><td>Radio Link Control</td><td>Error correction, segmentation, retransmission</td></tr>
+        <tr><td>MAC</td><td>Medium Access Control</td><td>Channel access and multiplexing</td></tr>
+        <tr><td>PHY</td><td>Physical Layer</td><td>Waveform modulation/demodulation (via SDR)</td></tr>
+      </tbody>
     </table>
+  </section>
 
-    <h2>TABLE III: YesDR Components</h2>
-    <h3>Core Network Functions</h3>
+  <section>
+    <h2>YesDR Component Functions</h2>
     <table>
-      <tr><th>Term</th><th>Full Form</th><th>Description</th></tr>
-      <tr><td>YAMF</td><td>YesDR Access Control Function</td><td>Registration and mobility</td></tr>
-      <tr><td>YSMF</td><td>YesDR Session Control Function</td><td>IP session lifecycle and routing</td></tr>
-      <tr><td>YUPF</td><td>YesDR Data Plane Function</td><td>User data forwarding</td></tr>
-      <tr><td>YNRF</td><td>YesDR Service Directory Function</td><td>Service discovery and registration</td></tr>
-      <tr><td>YUDM</td><td>YesDR Data Management Function</td><td>Subscriber and profile storage</td></tr>
-      <tr><td>YAUSF</td><td>YesDR Authentication Function</td><td>Authentication and key management</td></tr>
-      <tr><td>YPCF</td><td>YesDR Policy Management Function</td><td>Applies session/network policies</td></tr>
-      <tr><td>YSEF</td><td>YesDR Service Exposure Function</td><td>Secure API access</td></tr>
-      <tr><td>YNSSF</td><td>YesDR Slice Orchestration Function</td><td>Slice allocation for use cases</td></tr>
-      <tr><td>YRMF</td><td>YesDR Radio Management Function</td><td>Spectrum/bandwidth/frame control</td></tr>
-      <tr><td>YCRF</td><td>YesDR Cognitive Radio Function</td><td>AI-driven spectrum reuse and sensing</td></tr>
+      <thead>
+        <tr>
+          <th>Term</th>
+          <th>Full Form</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>YAMF</td><td>YesDR Access Control Function</td><td>Handles registration and mobility</td></tr>
+        <tr><td>YSMF</td><td>YesDR Session Control Function</td><td>Manages IP session lifecycles</td></tr>
+        <tr><td>YUPF</td><td>YesDR Data Plane Function</td><td>Forwards user-plane traffic</td></tr>
+        <tr><td>YNRF</td><td>YesDR Service Directory Function</td><td>Service discovery and registration</td></tr>
+        <tr><td>YUDM</td><td>YesDR Data Management Function</td><td>Subscriber and device profile storage</td></tr>
+        <tr><td>YAUSF</td><td>YesDR Authentication Function</td><td>Identity verification and key agreement</td></tr>
+        <tr><td>YPCF</td><td>YesDR Policy Management Function</td><td>Applies policies to sessions and flows</td></tr>
+        <tr><td>YSEF</td><td>YesDR Service Exposure Function</td><td>External access to network services</td></tr>
+        <tr><td>YNSSF</td><td>YesDR Slice Orchestration Function</td><td>Manages network slicing</td></tr>
+        <tr><td>YRMF</td><td>YesDR Radio Management Function</td><td>Spectrum, power, bandwidth allocation</td></tr>
+        <tr><td>YCRF</td><td>YesDR Cognitive Radio Function</td><td>AI-driven spectrum monitoring</td></tr>
+      </tbody>
     </table>
+  </section>
 
-    <h3>Control Protocols</h3>
+  <section>
+    <h2>Control Protocols</h2>
     <table>
-      <tr><th>Protocol</th><th>Full Form</th><th>Description</th></tr>
-      <tr><td>YACP</td><td>YesDR Access Control Protocol</td><td>Access and registration (YBS ↔ YAMF)</td></tr>
-      <tr><td>YSCP</td><td>YesDR Spectrum Control Protocol</td><td>Spectrum data exchange (YSM ↔ YAMF)</td></tr>
-      <tr><td>YTMP</td><td>YesDR Traffic Management Protocol</td><td>Session and QoS control (YSMF ↔ YUPF)</td></tr>
-      <tr><td>YTP</td><td>YesDR Tunneling Protocol</td><td>Encapsulation and transport</td></tr>
+      <thead>
+        <tr>
+          <th>Protocol</th>
+          <th>Full Form</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>YACP</td><td>YesDR Access Control Protocol</td><td>Manages access and authentication</td></tr>
+        <tr><td>YSCP</td><td>YesDR Spectrum Control Protocol</td><td>Coordinates spectrum management</td></tr>
+        <tr><td>YTMP</td><td>YesDR Traffic Management Protocol</td><td>Controls sessions and QoS</td></tr>
+        <tr><td>YTP</td><td>YesDR Tunneling Protocol</td><td>Encapsulation and forwarding of data</td></tr>
+      </tbody>
     </table>
-  </main>
+  </section>
+
+  <footer>
+    © 2025 YesDR Standard | Designed for research and innovation
+  </footer>
+
 </body>
 </html>
