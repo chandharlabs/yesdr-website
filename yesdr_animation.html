@@ -61,6 +61,10 @@
 </div>
   <svg viewBox="0 0 1200 650">
 
+    <text x="295" y="230" class="labelPath" transform="rotate(270,295,230)">YACP</text>
+    <text x="585" y="220" class="labelPath" transform="rotate(220,585,220)">PFCP</text>
+    <text x="475" y="310" class="labelPath" transform="rotate(0,475,310)">GTP</text>
+    <text x="200" y="230" class="labelPath" transform="rotate(-45,200,230)">YSMP</text>
 
   <script>
     function restartAnimation() {
@@ -230,11 +234,17 @@
 }
 
 
+    .labelPath {
+      font-size: 12px;
+     /*     fill: blue; */
+      opacity: 1;
+  /*    font-weight: bold; --> */
+    }
 </style>
 
 <!-- Registration Request: YUE -> YBS -> YAMF -->
 <polyline points="290,450 300,300 300,100" class="regPath" />
-<text x="940" y="460" class="eventText blink"
+<text x="1050" y="300" class="eventText blink"
   style="opacity: 0;
          animation-name: blinkingText;
          animation-duration: 1s;
@@ -247,7 +257,7 @@
 
 <!-- Authentication Request: YAMF -> YAUF -->
 <polyline points="150,100 300,100 300,300 290,450" class="authReqPath" />
-<text x="940" y="475" class="eventText blink"
+<text x="1050" y="320" class="eventText blink"
   style="opacity: 0;
          animation-name: blinkingText;
          animation-duration: 1s;
@@ -260,7 +270,7 @@
 
 <!-- Authentication Response: YAUF -> YAMF -> YBS -> YUE -->
 <polyline points="290,450 300,300 300,100 150,100" class="authResPath" />
-<text x="940" y="490" class="eventText blink"
+<text x="1050" y="340" class="eventText blink"
   style="opacity: 0;
          animation-name: blinkingText;
          animation-duration: 1s;
@@ -273,7 +283,7 @@
 
 <!-- Registration Accept: YAMF -> YBS -> YUE -->
 <polyline points="300,100 300,300 290,450" class="accPath" />
-<text x="940" y="505" class="eventText blink"
+<text x="1050" y="360" class="eventText blink"
   style="opacity: 0;
          animation-name: blinkingText;
          animation-duration: 1s;
@@ -286,7 +296,7 @@
 
 <!-- PDU Session Request: YUE -> YBS -> YSMF -->
 <polyline points="290,450 300,300 300,100 450,100" class="pduReqPath" />
-<text x="940" y="520" class="eventText blink"
+<text x="1050" y="380" class="eventText blink"
   style="opacity: 0;
          animation-name: blinkingText;
          animation-duration: 1s;
@@ -299,7 +309,7 @@
 
 <!-- PDU Session Accept: YSMF -> YBS -> YUE -->
 <polyline points="450,100 300,100 300,300 290,450" class="pduAccPath" />
-<text x="940" y="535" class="eventText blink"
+<text x="1050" y="400" class="eventText blink"
   style="opacity: 0;
          animation-name: blinkingText;
          animation-duration: 1s;
@@ -312,7 +322,7 @@
 
 <!-- Downlink Data Transfer: DN -> YUPF -> YBS -> YUE -->
 <polyline points="780,315 700,315 650,315 300,315 290,330 290,450" class="dlPath" />
-<text x="940" y="550" class="eventText blink"
+<text x="1050" y="420" class="eventText blink"
   style="opacity: 0;
          animation-name: blinkingText;
          animation-duration: 1s;
@@ -371,4 +381,3 @@
   </svg>
 </body>
 </html>
-
