@@ -51,6 +51,20 @@
 }
 
 
+    .labelPath {
+      font-size: 12px;
+     /*     fill: blue; */
+      opacity: 1;
+  /*    font-weight: bold; --> */
+    }
+    
+
+    .coreBox {
+      fill: none;
+      stroke: #2c3e50;
+      stroke-width: .5;
+      stroke-dasharray: 10 5;
+    }
 
   </style>
 </head>
@@ -60,6 +74,8 @@
   <button onclick="restartAnimation()">🔁 Restart Animation</button>
 </div>
   <svg viewBox="0 0 1200 650">
+    <rect x="80" y="30" width="900" height="120" class="coreBox" />
+    <text x="85" y="45" font-size="14" >YesDR Core Network</text>
 
     <text x="295" y="230" class="labelPath" transform="rotate(270,295,230)">YACP</text>
     <text x="585" y="220" class="labelPath" transform="rotate(220,585,220)">PFCP</text>
@@ -234,12 +250,6 @@
 }
 
 
-    .labelPath {
-      font-size: 12px;
-     /*     fill: blue; */
-      opacity: 1;
-  /*    font-weight: bold; --> */
-    }
 </style>
 
 <!-- Registration Request: YUE -> YBS -> YAMF -->
