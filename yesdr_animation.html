@@ -111,7 +111,7 @@
 <rect class="block highlight" style="animation-delay: 10s;" x="600" y="300" width="100" height="30" rx="5" /><text x="650" y="320" text-anchor="middle">YUPF</text>
 <rect class="block highlight" style="animation-delay: 11s;" x="100" y="300" width="100" height="30" rx="5" /><text x="150" y="320" text-anchor="middle">YSM</text>
 <rect class="block highlight" style="animation-delay: 12s;" x="250" y="300" width="100" height="30" rx="5" /><text x="300" y="320" text-anchor="middle">YBS</text>
-<rect class="block highlight" style="animation-delay: 13s;" x="250" y="450" width="80" height="30" rx="5" /><text x="290" y="470" text-anchor="middle">YUE</text>
+<rect class="block highlight" style="animation-delay: 13s;" x="250" y="450" width="100" height="30" rx="5" /><text x="300" y="470" text-anchor="middle">YUE</text>
 <circle cx="800" cy="315" r="20" class="block" /><text x="800" y="320" text-anchor="middle">DN</text>
 
     <text x="850" y="300" font-size="14" fill="green" style="opacity: 0; animation: fadeIn 1s forwards; animation-delay: 0s;">Start YNRF</text>
@@ -142,12 +142,12 @@
 }
 
 .ysmReportPath {
-  stroke: gray;
+  stroke: magenta;
   stroke-width: 4;
   stroke-dasharray: 10 5;
   fill: none;
   opacity: 0;
-  marker-end: url(#arrowgray);
+  marker-end: url(#arrowmagenta);
   animation: fadeInOut 7s linear infinite;
   animation-delay: 12s; /* Start after YSM appears at 11s */
 }
@@ -309,7 +309,7 @@
          animation-name: blinkingText;
          animation-delay: 11s;
          animation-duration: 1s;
-         animation-iteration-count: 10;
+         animation-iteration-count: 3;
          animation-fill-mode: forwards;">
   Spectrum Report
 </text>
@@ -342,7 +342,7 @@
 
 
 <!-- Registration Request: YUE -> YBS -> YAMF -->
-<polyline points="290,450 300,300 300,100" class="regPath" />
+<polyline points="300,450 300,300 300,125" class="regPath" />
 <text x="950" y="360" class="eventText blink"
   style="opacity: 0;
          animation-name: blinkingText;
@@ -355,7 +355,7 @@
 </text>
 
 <!-- Authentication Request: YAMF -> YAUSF -->
-<polyline points="150,100 150,85 300,85 300,300 290,450" class="authReqPath" />
+<polyline points="150,100 150,85 300,85 300,300 300,450" class="authReqPath" />
 <text x="950" y="380" class="eventText blink"
   style="opacity: 0;
          animation-name: blinkingText;
@@ -368,7 +368,7 @@
 </text>
 
 <!-- Authentication Response: YAUF -> YAMF -> YBS -> YUE -->
-<polyline points="290,450 300,300 300,85 150,85 150,100" class="authResPath" />
+<polyline points="300,450 300,300 300,85 150,85 150,100" class="authResPath" />
 <text x="950" y="400" class="eventText blink"
   style="opacity: 0;
          animation-name: blinkingText;
@@ -381,7 +381,7 @@
 </text>
 
 <!-- Registration Accept: YAMF -> YBS -> YUE -->
-<polyline points="300,100 300,300 290,450" class="accPath" />
+<polyline points="300,125 300,300 300,450" class="accPath" />
 <text x="950" y="420" class="eventText blink"
   style="opacity: 0;
          animation-name: blinkingText;
@@ -394,7 +394,7 @@
 </text>
 
 <!-- PDU Session Request: YUE -> YBS -> YSMF -->
-<polyline points="290,450 300,300 300,85 450,85 450,100" class="pduReqPath" />
+<polyline points="300,450 300,300 300,85 450,85 450,100" class="pduReqPath" />
 <text x="950" y="440" class="eventText blink"
   style="opacity: 0;
          animation-name: blinkingText;
@@ -407,7 +407,7 @@
 </text>
 
 <!-- PDU Session Accept: YSMF -> YBS -> YUE -->
-<polyline points="450,100 450,85 300,85 300,300 290,450" class="pduAccPath" />
+<polyline points="450,100 450,85 300,85 300,300 300,450" class="pduAccPath" />
 <text x="950" y="460" class="eventText blink"
   style="opacity: 0;
          animation-name: blinkingText;
@@ -420,7 +420,7 @@
 </text>
 
 <!-- Downlink Data Transfer: DN -> YUPF -> YBS -> YUE -->
-<polyline points="780,315 700,315 650,315 300,315 290,330 290,450" class="dlPath" />
+<polyline points="780,315 700,315 650,315 300,315 300,330 300,450" class="dlPath" />
 <text x="950" y="480" class="eventText blink"
   style="opacity: 0;
          animation-name: blinkingText;
@@ -471,7 +471,7 @@
     </g>
 
     <!-- Connections -->
-    <line x1="290" y1="450" x2="290" y2="330" class="line" />
+    <line x1="300" y1="450" x2="300" y2="330" class="line" />
     <line x1="350" y1="315" x2="600" y2="315" class="line" />
     <line x1="700" y1="315" x2="780" y2="315" class="line" />
     <line x1="300" y1="300" x2="300" y2="125" class="line" />
